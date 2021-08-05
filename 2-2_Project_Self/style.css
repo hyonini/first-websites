@@ -1,0 +1,253 @@
+:root {
+  /*color*/
+  --white-color: #fff;
+  --blue-dar-color: #29434e;
+  --blue-lig-color: #819ca9;
+  --grey-dar-color: #757575;
+  --grey-lig-color: #a4a4a4;
+  /*size*/
+  --padding: 20px;
+  --padding-small: 8px;
+  --avatar-size: 36px;
+  /*font size*/
+  --font-large: 20px;
+  --font-medium: 16px;
+  --font-small: 13px;
+  --font-micro: 11px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: none;
+}
+
+body {
+  font-family: Mukta;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  background-color: var(--blue-dar-color);
+  color: var(--white-color);
+}
+
+.logo {
+  font-size: var(--font-large);
+}
+
+.search_bar {
+  font-size: var(--font-large);
+}
+
+header .logo .fa-headphones-alt {
+  padding: var(--padding-small);
+}
+
+header .search_bar .fa-search {
+  padding: var(--padding-small);
+}
+
+/*vidoe*/
+.video {
+  text-align: center;
+  position: sticky;
+  background-color: var(--blue-lig-color);
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/*metadata_hastag*/
+.info {
+  background-color: var(--blue-lig-color);
+}
+
+.info .hashtag .tags {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: var(--font-small);
+}
+
+.info .hashtag .tags .tag1:hover {
+  background: var(--blue-dar-color);
+  border-radius: 4px;
+}
+
+.info .hashtag .tags .tag2:hover {
+  background: var(--blue-dar-color);
+  border-radius: 4px;
+}
+
+.info .hashtag .tags .tag3:hover {
+  background: var(--blue-dar-color);
+  border-radius: 4px;
+}
+
+/*metadata_titleandinfo*/
+.info .titleAndinfo {
+  display: flex;
+}
+
+.info .titleAndinfo .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+  display: -webkit-box;
+  --webkit-box-orient: vertical;
+  --webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .titleAndinfo .views {
+  font-size: var(--font-micro);
+}
+
+.info .titleAndinfo .moreinfo {
+  height: 100%;
+}
+
+.info .titleAndinfo .title {
+  font-size: var(--font-small);
+}
+
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dar-color);
+}
+
+/*info_buttons*/
+.info .icons {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.info .icons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-small);
+  color: var(--white-color);
+}
+
+.info .icons button i.active {
+  color: var(--blue-dar-color);
+}
+
+/*info_channel*/
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-dar-color);
+  border-bottom: 1px solid var(--grey-dar-color);
+}
+
+.channel .owner {
+  display: flex;
+  align-items: center;
+}
+
+.channel .owner .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .channel img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info .channel .info .name {
+  font-size: var(--font-medium);
+}
+
+.info .channel .info .subscriber {
+  font-size: var(--font-small);
+}
+
+/*extra vedeo*/
+.moreinfo {
+  padding: 0 var(--padding);
+  background-color: var(--blue-lig-color);
+}
+
+.moreinfo > .title {
+  font-size: var(--font-medium);
+  color: var(--grey-dar-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.moreinfo .items {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.moreinfo .items .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.moreinfo .items .img img {
+  width: 100%;
+}
+
+.moreinfo .items .info {
+  flex: 1 1 60%;
+}
+
+.moreinfo .items .more {
+  flex: 1 1 5%;
+}
+
+.moreinfo .items .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.moreinfo .items .info .title {
+  font-size: var(--font-small);
+}
+
+.moreinfo .items .info .name {
+  font-size: var(--font-micro);
+  color: var(--grey-dar-color);
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
+}
